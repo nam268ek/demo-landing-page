@@ -1,0 +1,41 @@
+.background {
+}
+.background-text {
+    &-primary {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: white;
+        margin: 0 32px;
+        padding: 16px 0;
+        text-align: center;
+    }
+}
+.btn-background {
+    display: flex;
+    justify-content: center;
+
+    &__btn-secondary {
+        width: fit-content;
+        display: block;
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 10px 52px;
+
+        &:hover {
+            background-color: rgb(248, 226, 240);
+        }
+    }
+}
+.background-animation {
+    &__image {
+
+        &-source {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
