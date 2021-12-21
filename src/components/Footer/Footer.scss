@@ -1,0 +1,61 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 7rem 0;
+}
+.footer-layout-1 {
+    width: 30%;
+}
+.footer-logo {
+    color: white;
+    margin-bottom: 3rem;
+    &__icon {
+        display: flex;
+        column-gap: 1rem;
+    }
+    &__icon-github,
+    &__icon-twitter,
+    &__icon-slack {
+        color: white;
+    }
+}
+.footer-layout-2 {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    &__col-1,
+    &__col-2,
+    &__col-3 {
+        list-style-type: none;
+        width: calc(100% * 1 / 3);
+        &-item {
+            margin-bottom: 1rem;
+        }
+        &-item > a {
+            color: white;
+            font-size: 1rem;
+        }
+    }
+}
+hr {
+    background-color: white;
+    border: 0;
+    height: 1px;
+}
+.footer-copyright {
+    display: flex;
+    padding-bottom: 3rem;
+    &__left {
+        width: 30%;
+        & > span {
+            color: rgb(143, 143, 143);
+        }
+    }
+    &__right {
+        width: 70%;
+        & > span {
+            color: rgb(143, 143, 143);
+            padding-right: 2rem;
+        }
+    }
+}
