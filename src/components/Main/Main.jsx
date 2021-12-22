@@ -1,15 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
-import "./Main.scss";
 import { Link } from "react-router-dom";
+import background2 from "../Images/background-2.png";
+import code from "../Images/code.png";
 import svg1 from "../Images/svg1.png";
 import svg2 from "../Images/svg2.png";
 import svg3 from "../Images/svg3.png";
 import svg4 from "../Images/svg4.png";
 import svg5 from "../Images/svg5.png";
 import svg6 from "../Images/svg6.png";
-import code from "../Images/code.png";
-import background2 from "../Images/background-2.png";
+import "./Main.scss";
 
 Main.propTypes = {};
 
@@ -108,7 +107,7 @@ function Main(props) {
               <ul className="selection-2-list-note__list">
                 <li className="selection-2-list-note__list-item">
                   <div className="selection-2-list-note__list-item__image">
-                    <img src={svg1} alt="" />
+                    <img className="selection-2-list-note__list-item__image-source" src={svg1} alt="" />
                   </div>
                   <h1 className="selection-2-list-note__list-item__title">
                     Works with popular libraries
@@ -240,7 +239,7 @@ function Main(props) {
                 </ul>
               </div>
               <div className="selection-3-list-note__column-item">
-                <img src={code} alt="" />
+                <img className="selection-3-list-note__column-item-image" src={code} alt="" />
               </div>
             </div>
           </div>
@@ -251,7 +250,13 @@ function Main(props) {
           <div className="selection-4">
             <div className="selection-4-list-note__column">
               <div className="selection-4-list-note__column-item">
-                <img src={background2} alt="" />
+                <div className="selection-4-list-note__column-item-content">
+                  <img
+                    className="selection-4-list-note__column-item-image"
+                    src={background2}
+                    alt=""
+                  />
+                </div>
               </div>
               <div className="selection-4-list-note__column-item">
                 <h1 className="selection-4-list-note__column-item__title">
@@ -288,30 +293,35 @@ function Main(props) {
               <div className="selection-5-image">
                 <div className="selection-5-logo">
                   <img
+                    className="selection-5-logo__image"
                     src="https://browserless.dreamhosters.com/wp-content/uploads/2021/10/microsoft.svg"
                     alt=""
                   />
-                </div>{" "}
+                </div>
                 <div className="selection-5-logo">
                   <img
+                    className="selection-5-logo__image"
                     src="https://browserless.dreamhosters.com/wp-content/uploads/2021/10/heroku.svg"
                     alt=""
                   />
-                </div>{" "}
+                </div>
                 <div className="selection-5-logo">
                   <img
+                    className="selection-5-logo__image"
                     src="https://browserless.dreamhosters.com/wp-content/uploads/2021/10/webflow.svg"
                     alt=""
                   />
-                </div>{" "}
+                </div>
                 <div className="selection-5-logo">
                   <img
+                    className="selection-5-logo__image"
                     src="https://browserless.dreamhosters.com/wp-content/uploads/2021/10/woorank.svg"
                     alt=""
                   />
-                </div>{" "}
+                </div>
                 <div className="selection-5-logo">
                   <img
+                    className="selection-5-logo__image"
                     src="https://browserless.dreamhosters.com/wp-content/uploads/2021/11/samsara.svg"
                     alt=""
                   />
@@ -352,7 +362,7 @@ function Main(props) {
                   Browserless is a great browser-as-a-service tool that just
                   works. We use it as a micro-service that renders thousands of
                   dashboards per day as image of PDF and are very happy with the
-                  stability and performance.  
+                  stability and performance.
                 </p>
                 <cite>
                   Ian Formanek — CEO, <Link to="">Cluvio</Link>
@@ -360,10 +370,16 @@ function Main(props) {
               </div>
               <div className="selection-5__btn">
                 <Link className="selection-5__btn-up" to="">
-                <img src="https://img.icons8.com/ios-filled/18/000000/long-arrow-left.png" alt=""/>
+                  <img
+                    src="https://img.icons8.com/ios-filled/18/000000/long-arrow-left.png"
+                    alt=""
+                  />
                 </Link>
                 <Link className="selection-5__btn-down" to="">
-                <img src="https://img.icons8.com/ios-filled/18/000000/long-arrow-right.png" alt=""/>
+                  <img
+                    src="https://img.icons8.com/ios-filled/18/000000/long-arrow-right.png"
+                    alt=""
+                  />
                 </Link>
               </div>
             </div>
@@ -375,9 +391,11 @@ function Main(props) {
           <div className="selection-6">
             <div className="selection-6-title">
               <h1 className="selection-6-title__header">
-              Ready to try benefits of Browserless?
+                Ready to try benefits of Browserless?
               </h1>
-              <Link className="selection-6-link" to="">Sign Up</Link>
+              <Link className="selection-6-link" to="">
+                Sign Up
+              </Link>
             </div>
           </div>
         </div>

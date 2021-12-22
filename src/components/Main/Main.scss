@@ -1,3 +1,5 @@
+@use "../../scss/" as *;
+
 .bg-white {
     background-color: #f7f7f7;
 }
@@ -7,7 +9,11 @@
 .selection-4,
 .selection-5,
 .selection-6 {
-    padding: 7rem 0;
+    padding: 7rem 2rem;
+
+    @include mobile {
+        padding: 3rem 1rem;
+    }
 }
 .text-primary {
     &__text {
@@ -16,6 +22,18 @@
         font-weight: 700;
         width: 80%;
         padding-bottom: 3rem;
+
+        @include tablet {
+            font-size: 2rem;
+            width: 90%;
+            padding-top: 0;
+        }
+
+        @include mobile {
+            font-size: 2rem;
+            width: 100%;
+            font-weight: 620;
+        }
     }
 }
 .list-note {
@@ -25,12 +43,28 @@
         column-gap: 2rem;
         row-gap: 2rem;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        @include tablet {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include mobile {
+            width: 100%;
+            display: block;
+        }
         &-item {
             font-size: 18px;
             font-weight: 500;
             position: relative;
             padding-left: 1.75rem;
 
+            @include tablet {
+                font-size: 0.92rem;
+            }
+
+            @include mobile {
+                margin-bottom: 2rem;
+            }
             &:before {
                 background-color: rgba(13, 13, 13, 1);
                 content: "";
@@ -50,10 +84,18 @@
         row-gap: 2rem;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         margin-top: 5rem;
+
+        @include mobile {
+            display: block;
+        }
         &-item {
             border: 1px solid rgb(196, 196, 196);
             padding: 22px 16px;
             background-color: white;
+
+            @include mobile {
+                margin-bottom: 1rem;
+            }
             &__link {
                 display: block;
                 text-align: center;
@@ -70,6 +112,13 @@
         font-weight: 500;
         margin-top: 16px;
         margin-bottom: 16px;
+
+        @include tablet {
+            font-size: 1.56rem;
+            width: 118px;
+            margin: 1rem auto;
+            text-align: center;
+        }
     }
     &-image {
         display: block;
@@ -89,6 +138,10 @@
             font-weight: 600;
             color: white;
             margin-bottom: 18px;
+
+            @include tablet {
+                font-size: 2.2rem;
+            }
         }
         &-desc {
             font-size: 20px;
@@ -96,6 +149,11 @@
             color: white;
             width: 75%;
             margin-bottom: 4rem;
+
+            @include tablet {
+                width: 100%;
+                font-size: 1.1rem;
+            }
         }
     }
     &-list-note__list {
@@ -104,30 +162,66 @@
         column-gap: 2rem;
         row-gap: 2rem;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        @include tablet {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            row-gap: 3rem;
+            column-gap: 1rem;
+        }
+
+        @include mobile {
+            display: block;
+            width: 100%;
+        }
         &-item {
             color: white;
+
+            @include mobile {
+                margin-bottom: 2rem;
+            }
             &__image {
                 margin-bottom: 1rem;
+                &-source {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                }
             }
             &__title {
                 font-size: 1.5rem;
                 font-weight: 600;
                 margin-bottom: 16px;
+
+                @include tablet {
+                    font-size: 1.2rem;
+                }
             }
         }
     }
 }
 .w45 {
     width: 35%;
+
+    @include tablet {
+        width: 100%;
+    }
 }
 .selection-3 {
     // background-color: #c06f6f;
     &-list-note__column {
         display: flex;
         justify-content: space-between;
+        
+        @include tablet {
+            flex-direction: column;
+        }
         &-item__list {
             list-style-type: none;
             position: relative;
+
+            @include tablet {
+                margin-bottom: 2rem;
+            }
             &::before {
                 background-color: #727272;
                 content: "";
@@ -137,10 +231,23 @@
                 left: 0.46rem;
                 display: block;
                 position: absolute;
+
+                @include tablet {
+                    height: 80%;
+                }
             }
             &-item {
                 position: relative;
                 padding-left: 3rem;
+
+                @include tablet {
+                    width: 50%;
+                }
+
+                @include mobile {
+                    width: 100%;
+                }
+
                 &:before {
                     background-image: linear-gradient(#0d0d0d, #0d0d0d), linear-gradient(315deg, #ffea00, #fff);
                     background-clip: content-box, border-box;
@@ -163,6 +270,10 @@
             font-weight: 700;
             color: white;
             margin-bottom: 2rem;
+
+            @include tablet {
+                font-size: 2.2rem;
+            }
         }
         &-item__link {
             font-size: 1.5rem;
@@ -172,6 +283,11 @@
         }
         &-item__content {
             color: white;
+        }
+        &-item-image {
+            display: block;
+            width: 100%;
+            object-fit: cover;
         }
     }
 }
@@ -185,17 +301,48 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @include tablet {
+        flex-flow: column-reverse;
+    }
     &-item__title {
         font-size: 3rem;
         font-weight: 700;
         margin-bottom: 2rem;
+
+        @include tablet {
+            font-size: 2.4rem;
+        }
     }
     &-item {
         width: 43%;
+
+        @include tablet {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        &-content {
+            display: flex;
+            width: 65%;
+            margin: 0 auto;
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+        &-image {
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
     }
     &-item > p {
         font-size: 1.125rem;
         margin-bottom: 2rem;
+
+        @include tablet {
+            font-size: 0.965rem;
+        }
     }
     &-item > a {
         font-size: 1.15rem;
@@ -210,12 +357,27 @@ a {
         justify-content: center;
         align-items: center;
     }
+    &-logo {
+        &__image {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
     &-image {
         display: flex;
         flex-direction: row;
         align-items: center;
         column-gap: 4rem;
         margin-bottom: 4rem;
+
+        @include mobile {
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            column-gap: 1rem;
+            row-gap: 1rem;
+        }
     }
     &-text__header {
         text-align: center;
@@ -223,6 +385,18 @@ a {
         font-weight: 700;
         width: 70%;
         margin-bottom: 4rem;
+
+        @include tablet {
+            font-size: 2.5rem;
+            width: 85%;
+            font-weight: 600;
+        }
+
+        @include mobile {
+            font-size: 2rem;
+            width: 100%;
+            font-weight: 700;
+        }
     }
     &-svg {
         margin-bottom: 4rem;
@@ -239,6 +413,11 @@ a {
             width: 82%;
             text-align: center;
             margin-bottom: 2rem;
+
+            @include tablet {
+                width: 100%;
+                font-size: 1.42rem;
+            }
         }
         & > cite {
             font-weight: 500;
@@ -293,6 +472,15 @@ a {
             margin-bottom: 4rem;
             width: 80%;
             text-align: center;
+
+            @include tablet {
+                font-size: 2.5rem;
+            }
+
+            @include mobile {
+                width: 100%;
+                font-size: 1.8rem;
+            }
         }
     }
     &-link {

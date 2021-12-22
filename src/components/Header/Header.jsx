@@ -1,11 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
-import "./Header.scss";
 import { Link } from "react-router-dom";
+import "./Header.scss";
 
 Header.propTypes = {};
 
 function Header(props) {
+ 
   return (
     <>
       <div className="layout">
@@ -29,8 +29,9 @@ function Header(props) {
               </div>
               <div className="logo-brand__logo-name"></div>
             </div>
+
             <div className="navbar">
-              <ul className="navbar__nav-item">
+              <ul className="navbar__nav-item" id="navbar-transform">
                 <li className="navbar__nav-item__item">
                   <Link className="navbar__nav-item__item-link" to="">
                     UseCases
@@ -61,6 +62,18 @@ function Header(props) {
             <div className="btn">
               <button className="btn__btn-primary">Account</button>
             </div>
+
+            <button className="btn-dropdown">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M5 7h22v2H5zM5 15h14v2H5zM5 23h22v2H5z"></path>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
