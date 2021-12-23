@@ -107,7 +107,7 @@ function Main(props) {
               <ul className="selection-2-list-note__list">
                 <li className="selection-2-list-note__list-item">
                   <div className="selection-2-list-note__list-item__image">
-                    <img className="selection-2-list-note__list-item__image-source" src={svg1} alt="" />
+                    <img src={svg1} alt="" />
                   </div>
                   <h1 className="selection-2-list-note__list-item__title">
                     Works with popular libraries
