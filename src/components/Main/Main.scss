@@ -169,28 +169,43 @@
             column-gap: 1rem;
         }
 
+        @include laptop {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            row-gap: 3rem;
+            column-gap: 1rem;
+        }
+
         @include mobile {
             display: block;
             width: 100%;
         }
         &-item {
             color: white;
+            display: flex;
+            flex-direction: column;
 
             @include mobile {
                 margin-bottom: 2rem;
             }
             &__image {
-                margin-bottom: 1rem;
+                width: 60px;
+                height: 60px;
+
                 &-source {
                     display: block;
                     width: 100%;
+                    height: 100%;
                     object-fit: cover;
                 }
+            }
+            & > p {
+                // padding-top: 10px;
             }
             &__title {
                 font-size: 1.5rem;
                 font-weight: 600;
                 margin-bottom: 16px;
+                margin-top: 16px;
 
                 @include tablet {
                     font-size: 1.2rem;
@@ -205,14 +220,22 @@
     @include tablet {
         width: 100%;
     }
+
+    @include laptop {
+        width: 80%;
+    }
 }
 .selection-3 {
     // background-color: #c06f6f;
     &-list-note__column {
         display: flex;
         justify-content: space-between;
-        
+
         @include tablet {
+            flex-direction: column;
+        }
+
+        @include laptop {
             flex-direction: column;
         }
         &-item__list {
@@ -274,6 +297,8 @@
             @include tablet {
                 font-size: 2.2rem;
             }
+
+            
         }
         &-item__link {
             font-size: 1.5rem;
@@ -305,6 +330,10 @@ a {
     @include tablet {
         flex-flow: column-reverse;
     }
+
+    @include laptop {
+        flex-flow: column-reverse;
+    }
     &-item__title {
         font-size: 3rem;
         font-weight: 700;
@@ -318,6 +347,11 @@ a {
         width: 43%;
 
         @include tablet {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        @include laptop {
             width: 100%;
             margin-bottom: 2rem;
         }

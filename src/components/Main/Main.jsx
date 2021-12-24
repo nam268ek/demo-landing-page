@@ -107,7 +107,7 @@ function Main(props) {
               <ul className="selection-2-list-note__list">
                 <li className="selection-2-list-note__list-item">
                   <div className="selection-2-list-note__list-item__image">
-                    <img src={svg1} alt="" />
+                    <img className="selection-2-list-note__list-item__image-source" src={svg1} alt="" />
                   </div>
                   <h1 className="selection-2-list-note__list-item__title">
                     Works with popular libraries
@@ -118,7 +118,7 @@ function Main(props) {
                 </li>
                 <li className="selection-2-list-note__list-item">
                   <div className="selection-2-list-note__list-item__image">
-                    <img src={svg2} alt="" />
+                    <img className="selection-2-list-note__list-item__image-source" src={svg2} alt="" />
                   </div>
                   <h1 className="selection-2-list-note__list-item__title">
                     Turn up the speed
@@ -130,7 +130,7 @@ function Main(props) {
                 </li>
                 <li className="selection-2-list-note__list-item">
                   <div className="selection-2-list-note__list-item__image">
-                    <img src={svg3} alt="" />
+                    <img className="selection-2-list-note__list-item__image-source" src={svg3} alt="" />
                   </div>
                   <h1 className="selection-2-list-note__list-item__title">
                     Powerful REST API
@@ -142,7 +142,7 @@ function Main(props) {
                 </li>
                 <li className="selection-2-list-note__list-item">
                   <div className="selection-2-list-note__list-item__image">
-                    <img src={svg4} alt="" />
+                    <img className="selection-2-list-note__list-item__image-source" src={svg4} alt="" />
                   </div>
                   <h1 className="selection-2-list-note__list-item__title">
                     No time restrictions
@@ -154,7 +154,7 @@ function Main(props) {
                 </li>
                 <li className="selection-2-list-note__list-item">
                   <div className="selection-2-list-note__list-item__image">
-                    <img src={svg5} alt="" />
+                    <img className="selection-2-list-note__list-item__image-source" src={svg5} alt="" />
                   </div>
                   <h1 className="selection-2-list-note__list-item__title">
                     Notifications and metrics
@@ -166,7 +166,7 @@ function Main(props) {
                 </li>
                 <li className="selection-2-list-note__list-item">
                   <div className="selection-2-list-note__list-item__image">
-                    <img src={svg6} alt="" />
+                    <img className="selection-2-list-note__list-item__image-source" src={svg6} alt="" />
                   </div>
                   <h1 className="selection-2-list-note__list-item__title">
                     No software to install

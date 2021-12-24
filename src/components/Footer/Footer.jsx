@@ -73,7 +73,6 @@ function Footer(props) {
                     ></path>
                   </svg>
                 </div>
-                <div className="footer-logo__icon-linkedin"></div>
               </div>
             </div>
             <div className="footer-layout-2">

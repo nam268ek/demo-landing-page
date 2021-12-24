@@ -22,11 +22,15 @@
         justify-content: space-between;
         padding: 0 1rem;
     }
+    @include laptop {
+        padding-left: 1rem;
+    }
 }
 .footer-logo {
     color: white;
     margin-bottom: 3rem;
 
+   
     & > svg {
         width: 8rem;
     }
@@ -38,6 +42,8 @@
         @include mobile {
             column-gap: 0.4rem;
         }
+
+        
     }
     &__icon-github,
     &__icon-twitter,
@@ -64,6 +70,11 @@
         @include tablet {
             width: 100%;
             margin-bottom: 2rem;
+        }
+
+        @include laptop {
+            width: 100%;
+            padding: 0 1rem;
         }
         &-item {
             margin-bottom: 1rem;
